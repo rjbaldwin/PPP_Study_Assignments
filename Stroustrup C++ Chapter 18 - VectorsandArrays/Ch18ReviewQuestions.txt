@@ -1,0 +1,54 @@
+Chapter 18 review questions: 31/05/2023
+
+1. What does “Caveat emptor!” mean?
+Let the buyer beware!  
+
+2. What is the default meaning of copying for class objects?
+
+In C++, when you create a class object and perform a copy operation, the default behavior is known as "copy construction" and "copy assignment." 
+
+Copy construction occurs when you initialize a new object using an existing object of the same class type. It can happen in several situations, such as passing an object by value to a function, returning an object by value from a function, or explicitly creating a new object from an existing one using the copy constructor.
+
+The copy constructor is a special member function that initializes a new object with the values of another object of the same class. If you do not define a copy constructor explicitly, the compiler generates a default copy constructor for you. By default, the copy constructor performs a member-wise copy, where each member of the source object is copied to the corresponding member of the new object.
+
+Copy assignment occurs when you assign an existing object to another object of the same class type using the assignment operator (=). If you do not define a copy assignment operator explicitly, the compiler generates a default copy assignment operator for you. The default copy assignment operator also performs a member-wise copy, similar to the copy constructor.
+
+It's important to note that the default behavior of copying may not be appropriate for classes that manage resources like dynamic memory. In such cases, you may need to define custom copy constructors and copy assignment operators to perform a deep copy or implement other appropriate logic to handle the resource management correctly. This is known as the "Rule of Three" or "Rule of Five" in C++.
+
+3. 
+The default meaning of copying class objects is appropriate in many scenarios, especially when the class doesn't manage any dynamically allocated resources or when a shallow copy is sufficient. Here are some situations where the default copying behavior is often suitable:
+
+1. Immutable classes: If your class consists of only read-only data members and doesn't require any special copying logic, the default copying behavior is usually sufficient.
+
+2. Plain Old Data (POD) types: POD types are standard-layout classes with no user-defined constructors, destructors, or virtual functions. Since they typically consist of basic data types or arrays, the default copying behavior works well for them.
+
+3. Small objects: If your class is small in size and doesn't involve complex data structures or external resources, the default copying behavior is generally appropriate.
+
+On the other hand, the default copying behavior may be inappropriate in certain situations:
+
+1. Resource management: If your class manages dynamically allocated memory, file handles, network connections, or any other external resources, the default copying behavior may lead to issues like double deletion or resource leaks. In such cases, you'll need to define custom copy constructors and copy assignment operators to properly manage the resources.
+
+2. Deep copying requirements: If your class contains pointers or references to dynamically allocated memory, and a shallow copy would result in multiple objects pointing to the same memory, you'll need to define a custom copy constructor and copy assignment operator to perform a deep copy.
+
+3. Invariant preservation: If your class has invariants (conditions that must always be true for the object's state), the default copying behavior might violate these invariants. In such cases, you need to define custom copying logic to ensure that the invariants are maintained during the copy.
+
+In summary, the default copying behavior is appropriate for simple, lightweight classes without resource management or complex data structures. However, for classes involving resource management or requiring deep copying or invariant preservation, you should provide custom copying logic to ensure correct behavior.
+
+
+
+
+
+4. What is a copy constructor?
+5. What is a copy assignment?
+6. What is the difference between copy assignment and copy initialization?
+7. What is shallow copy? What is deep copy?
+8. How does the copy of a vector compare to its source?
+9. What are the five “essential operations” for a class?
+10. What is an explicit constructor? Where would you prefer one over the (default) alternative?
+11. What operations may be invoked implicitly for a class object?
+12. What is an array?
+13. How do you copy an array?
+14. How do you initialize an array?
+15. When should you prefer a pointer argument over a reference argument? Why?
+16. What is a C-style string?
+17. What is a palindrome?

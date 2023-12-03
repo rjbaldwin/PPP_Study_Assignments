@@ -1,0 +1,1 @@
+write a programme that converts uppercase to lower case. 

@@ -1,0 +1,10 @@
+Odchody 		002 		12.50
+Stolec 			001 			1.25
+Kal 			005 		12.78
+Piersi 			010 			2.7
+Dupa 			003 			3.17
+Stanik 			007 			3.7
+Kleks 			006		55.2
+WargiSromowe 	009			22.175
+Cipa 008 33.2
+Hemoroidy 004 78.2
